@@ -1,24 +1,11 @@
 import React, { Fragment } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import AppBar from './components/AppBar';
-
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
-      </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
+import Copyright from './components/Copyright';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -52,6 +39,29 @@ const useStyles = makeStyles((theme) => ({
             paddingBottom: theme.spacing(6),
         },
     },
+    img: {
+        width: '30%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        display: 'block',
+        [theme.breakpoints.up('xs')]: {
+            width: '80%',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '30%',
+        },
+    },
+    descHeader: {
+        paddingTop: theme.spacing(12),
+        color: '#fff'
+    },
+    desc: {
+        color: '#fff',
+        lineHeight: '1.8',
+        whiteSpace: 'no-wrap',
+        margin: theme.spacing(12),
+        paddingBottom: theme.spacing(12),
+    }
 }));
 
 export default function Index() {
@@ -72,8 +82,24 @@ export default function Index() {
                 </Typography>
             </Container>
             {/* End hero unit */}
-            <Box width="auto" style={{ backgroundColor: '#C12121', height: '50vh', width: '100%' }}>
-                <Typography component="div" />
+            <div>
+                <img
+                    className={classes.img}
+                    alt={''}
+                    src={require("../assets/img/laptop.png")}
+                />
+            </div>
+            <Box width="auto" style={{ backgroundColor: '#C12121', minHeight: '50vh', width: '100%' }}>
+                <Typography variant="h4" align="center" gutterBottom className={classes.descHeader}>
+                    Hi, I'm Alkautsar Sanusi. Nice to meet you.
+                </Typography>
+                <Typography variant="h6" align="center" className={classes.desc}>
+                    Coming from Makassar, Indonesia, I started my journey as a developer in 2012.
+                    I have special interest in front-end and mobile development,
+                    where I have worked most of my projects and potentialized my skills.
+                    A fan of learning and interacting with new technologies,
+                    these are the skills I have learned and improved during my journey.
+                </Typography>
             </Box>
             <Box mt={5}>
                 <Copyright />
