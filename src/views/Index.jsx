@@ -5,11 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import AppBar from './components/AppBar';
-// import Copyright from './components/Copyright';
 import Skills from './components/Skills';
 import More from './components/More';
 import Grid from '@material-ui/core/Grid';
-import ContactMe from './components/ContactMe';
+import Footer from './components/Footer';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -92,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
     },
     contactMeBox: {
         backgroundColor: '#8a2a2a',
-        minHeight: '50vh',
+        minHeight: '30vh',
         width: '100%',
         zIndex: '-1',
         position: 'absolute'
@@ -113,6 +112,23 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: theme.spacing(5),
         color: '#fff',
         fontWeight: 'bold'
+    },
+    socialMedia: {
+        marginLeft: 10,
+        marginRight: 10,
+        [theme.breakpoints.up('xs')]: {
+            width: '20%',
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '8%',
+        },
+    },
+    socialMediaWrapper: {
+        display: 'block',
+        width: '40%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: theme.spacing(8),
     }
 }));
 
@@ -134,6 +150,23 @@ export default function Index() {
                     I'm a Web and Mobile Developer, passionate about what I do,
                     and always learning something new.
                 </Typography>
+                <div className={classes.socialMediaWrapper}>
+                    <img
+                        className={classes.socialMedia}
+                        alt={''}
+                        src={require("../assets/img/socialmedia/linkedin.png")}
+                    />
+                    <img
+                        className={classes.socialMedia}
+                        alt={''}
+                        src={require("../assets/img/socialmedia/twitter.png")}
+                    />
+                    <img
+                        className={classes.socialMedia}
+                        alt={''}
+                        src={require("../assets/img/socialmedia/github.png")}
+                    />
+                </div>
             </Container>
             {/* End hero unit */}
             <div>
@@ -166,21 +199,7 @@ export default function Index() {
                     <More />
                 </Grid>
             </Grid>
-            <ContactMe />
-            <Box width="auto" className={classes.contactMeBox}>
-                <img
-                    className={classes.contactMeLogo}
-                    alt={''}
-                    src={require("../assets/img/logo.png")}
-                />
-                <Typography variant="h5" align="center" gutterBottom className={classes.contactDesc}>
-                    Living, learning & leveling up one day at a time.
-                </Typography>
-            </Box>
-            {/* <Box mt={5}>
-                <Copyright />
-            </Box> */}
-            {/* End footer */}
+            <Footer />
         </Fragment >
     );
 }
