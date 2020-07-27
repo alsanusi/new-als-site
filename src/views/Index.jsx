@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: theme.spacing(12),
     },
     redBox: {
-        backgroundColor: '#C12121',
+        backgroundColor: '#8a2a2a',
         minHeight: '50vh',
         width: '100%'
     },
@@ -91,11 +91,28 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(8)
     },
     contactMeBox: {
-        backgroundColor: '#C12121',
+        backgroundColor: '#8a2a2a',
         minHeight: '50vh',
         width: '100%',
         zIndex: '-1',
         position: 'absolute'
+    },
+    contactMeLogo: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        display: 'block',
+        paddingTop: theme.spacing(15),
+        [theme.breakpoints.up('xs')]: {
+            width: '30%',
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '10%',
+        },
+    },
+    contactDesc: {
+        paddingTop: theme.spacing(5),
+        color: '#fff',
+        fontWeight: 'bold'
     }
 }));
 
@@ -151,8 +168,13 @@ export default function Index() {
             </Grid>
             <ContactMe />
             <Box width="auto" className={classes.contactMeBox}>
-                <Typography variant="h5" align="center" gutterBottom className={classes.descHeader}>
-                    Bye.
+                <img
+                    className={classes.contactMeLogo}
+                    alt={''}
+                    src={require("../assets/img/logo.png")}
+                />
+                <Typography variant="h5" align="center" gutterBottom className={classes.contactDesc}>
+                    Living, learning & leveling up one day at a time.
                 </Typography>
             </Box>
             {/* <Box mt={5}>

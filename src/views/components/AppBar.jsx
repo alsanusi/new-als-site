@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     appBar: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#fafafa',
         height: theme.spacing(10)
     },
     toolbar: {
