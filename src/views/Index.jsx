@@ -89,30 +89,6 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(12, 0, 6),
         marginBottom: theme.spacing(8)
     },
-    contactMeBox: {
-        backgroundColor: '#8a2a2a',
-        minHeight: '30vh',
-        width: '100%',
-        zIndex: '-1',
-        position: 'absolute'
-    },
-    contactMeLogo: {
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        display: 'block',
-        paddingTop: theme.spacing(15),
-        [theme.breakpoints.up('xs')]: {
-            width: '30%',
-        },
-        [theme.breakpoints.up('md')]: {
-            width: '10%',
-        },
-    },
-    contactDesc: {
-        paddingTop: theme.spacing(5),
-        color: '#fff',
-        fontWeight: 'bold'
-    },
     socialMedia: {
         marginLeft: 10,
         marginRight: 10,

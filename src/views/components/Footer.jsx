@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
             width: '30%',
         },
         [theme.breakpoints.up('md')]: {
-            width: '10%',
+            width: '8%',
         },
     },
     contactDesc: {

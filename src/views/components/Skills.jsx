@@ -32,6 +32,9 @@ const useStyles = makeStyles({
         marginTop: 20,
         marginBottom: 20,
         fontWeight: 'bold'
+    },
+    icon: {
+        width: '13%'
     }
 });
 
@@ -42,9 +45,13 @@ export default function SimpleCard() {
         <Card className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={4}>
-                    <CardContent style={{ paddingBottom: 50 }}>
+                    <CardContent style={{ paddingBottom: 50, paddingTop: 50 }}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            icon
+                            <img
+                                className={classes.icon}
+                                alt={''}
+                                src={require("../../assets/img/skills/mobile.png")}
+                            />
                         </Typography>
                         <Typography variant="h5" component="h2" gutterBottom className={classes.skillsHeader}>
                             Mobile Developer
@@ -61,9 +68,14 @@ export default function SimpleCard() {
                     </CardContent>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <CardContent style={{ paddingBottom: 50 }}>
+                    <CardContent style={{ paddingBottom: 50, paddingTop: 50 }}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            icon
+                            <img
+                                className={classes.icon}
+                                style={{ width: '13%' }}
+                                alt={''}
+                                src={require("../../assets/img/skills/fe.png")}
+                            />
                         </Typography>
                         <Typography variant="h5" component="h2" gutterBottom className={classes.skillsHeader}>
                             Front-end Development
@@ -80,9 +92,13 @@ export default function SimpleCard() {
                     </CardContent>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <CardContent style={{ paddingBottom: 50 }}>
+                    <CardContent style={{ paddingBottom: 50, paddingTop: 50 }}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
-                            icon
+                            <img
+                                className={classes.icon}
+                                alt={''}
+                                src={require("../../assets/img/skills/be.png")}
+                            />
                         </Typography>
                         <Typography variant="h5" component="h2" gutterBottom className={classes.skillsHeader}>
                             Back-end Development & Others
