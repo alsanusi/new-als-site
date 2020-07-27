@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar: {
         backgroundColor: '#fafafa',
-        height: theme.spacing(10)
+        height: theme.spacing(10),
+        paddingTop: theme.spacing(3)
     },
     toolbar: {
         flexWrap: 'wrap',

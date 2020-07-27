@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import ContactMe from './ContactMe';
+import Copyright from './Copyright';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -38,6 +39,23 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         paddingBottom: theme.spacing(5),
     },
+    socialMedia: {
+        marginLeft: 10,
+        marginRight: 10,
+        [theme.breakpoints.up('xs')]: {
+            width: '20%',
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '8%',
+        },
+    },
+    socialMediaWrapper: {
+        display: 'block',
+        width: '20%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: theme.spacing(5),
+    }
 }));
 
 export default function Index() {
@@ -53,9 +71,27 @@ export default function Index() {
                     alt={''}
                     src={require("../../assets/img/logo.png")}
                 />
-                <Typography variant="h6" align="center" gutterBottom className={classes.contactDesc}>
+                <Typography variant="body1" align="center" gutterBottom className={classes.contactDesc}>
                     Living, learning & leveling up one day at a time.
                 </Typography>
+                <div className={classes.socialMediaWrapper}>
+                    <img
+                        className={classes.socialMedia}
+                        alt={''}
+                        src={require("../../assets/img/footer/linkedin.png")}
+                    />
+                    <img
+                        className={classes.socialMedia}
+                        alt={''}
+                        src={require("../../assets/img/footer/twitter.png")}
+                    />
+                    <img
+                        className={classes.socialMedia}
+                        alt={''}
+                        src={require("../../assets/img/footer/github.png")}
+                    />
+                </div>
+                <Copyright />
             </Box>
         </Fragment >
     );
