@@ -62,11 +62,11 @@ export default function Pricing() {
                 <nav>
                     <Link variant="button" color="textPrimary" href="#" className={classes.link}>
                         About Me
-                        </Link>
+                    </Link>
                 </nav>
                 <Button href="#" variant="outlined" className={classes.contactMe}>
                     Contact Me
-                    </Button>
+                </Button>
             </Toolbar>
         </AppBar>
     );

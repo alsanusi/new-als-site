@@ -3,6 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import './App.css';
 import Index from './views/Index'
+import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
 
 const theme = createMuiTheme({
   typography: {
@@ -18,7 +19,12 @@ function App() {
   return (
       <ThemeProvider theme={theme}>
         <div className="App">
-          <Index />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Index} />
+            <Route path="/about-me" component={Index} />
+          </Switch>
+        </Router>
         </div>
       </ThemeProvider>
   );
