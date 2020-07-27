@@ -54,9 +54,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     descHeader: {
-        paddingTop: theme.spacing(12),
+        paddingTop: theme.spacing(11),
         color: '#fff',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        width: '60%',
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
     desc: {
         color: '#fff',
@@ -167,7 +171,7 @@ export default function Index() {
             <Skills />
             <Grid container style={{ marginBottom: '100px' }}>
                 <Grid item xs={12} md={12}>
-                    <Typography component="h1" variant="h2" align="center" color="textPrimary" className={classes.moreHeader}>
+                    <Typography variant="h3" align="center" color="textPrimary" className={classes.moreHeader}>
                         {open} More and More! {close}
                     </Typography>
                 </Grid>

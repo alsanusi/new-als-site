@@ -38,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
         color: '#fff',
         fontWeight: 'bold',
         paddingBottom: theme.spacing(5),
+        width: '60%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        display: 'block',
     },
     socialMedia: {
         marginLeft: 10,
@@ -51,7 +55,12 @@ const useStyles = makeStyles((theme) => ({
     },
     socialMediaWrapper: {
         display: 'block',
-        width: '20%',
+        [theme.breakpoints.up('xs')]: {
+            width: '40%',
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '25%',
+        },
         marginLeft: 'auto',
         marginRight: 'auto',
         marginBottom: theme.spacing(5),

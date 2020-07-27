@@ -12,12 +12,15 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '999',
         marginBottom: '-70px',
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        backgroundColor: '#000',
+        borderRadius: '20px'
     },
     skillsHeader: {
         fontWeight: 'bold',
         marginBottom: 20,
-        marginTop: 20
+        marginTop: 20,
+        color: '#fff'
     },
     skillsDesc: {
         marginBotton: 30,
@@ -25,10 +28,11 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '2.3',
         marginLeft: 'auto',
         marginRight: 'auto',
+        color: '#fff'
     },
     button: {
-        color: '#C12121',
-        border: '2px solid #C12121',
+        color: '#fff',
+        border: '2px solid #fff',
         margin: theme.spacing(1, 1.5)
     },
     alignCenter: {
@@ -44,14 +48,14 @@ export default function SimpleCard() {
             <Grid container spacing={3}>
                 <Grid item xs={12} md={4} className={classes.alignCenter}>
                     <CardContent>
-                        <Typography variant="h5" component="h2" gutterBottom className={classes.skillsHeader}>
+                        <Typography variant="h5" component="h2" className={classes.skillsHeader}>
                             Start a Project
                         </Typography>
                     </CardContent>
                 </Grid>
                 <Grid item xs={12} md={4} className={classes.alignCenter}>
                     <CardContent>
-                        <Typography variant="body1" component="p" gutterBottom className={classes.skillsDesc}>
+                        <Typography variant="body1" component="p" className={classes.skillsDesc}>
                             Interested in working together? Let's schedule a call.
                         </Typography>
                     </CardContent>

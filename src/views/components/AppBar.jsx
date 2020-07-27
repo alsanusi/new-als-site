@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
     img: {
         position: 'absolute',
-        width: '50px',
+        width: '70px',
         marginTop: 8,
         top: 0,
         bottom: 0,
