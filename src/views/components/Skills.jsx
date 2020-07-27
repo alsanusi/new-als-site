@@ -16,9 +16,6 @@ const useStyles = makeStyles({
     title: {
         fontSize: 14,
     },
-    pos: {
-        marginBottom: 12,
-    },
     skillsHeader: {
         fontWeight: 'bold',
         marginBottom: 20,
@@ -27,6 +24,7 @@ const useStyles = makeStyles({
     skillsDesc: {
         marginBotton: 30,
         width: '60%',
+        lineHeight: '2.3',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -39,13 +37,12 @@ const useStyles = makeStyles({
 
 export default function SimpleCard() {
     const classes = useStyles();
-    // const bull = <span className={classes.bullet}>•</span>;
 
     return (
         <Card className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={4}>
-                    <CardContent>
+                    <CardContent style={{ paddingBottom: 50 }}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
                             icon
                         </Typography>
@@ -64,7 +61,7 @@ export default function SimpleCard() {
                     </CardContent>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <CardContent>
+                    <CardContent style={{ paddingBottom: 50 }}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
                             icon
                         </Typography>
@@ -83,7 +80,7 @@ export default function SimpleCard() {
                     </CardContent>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <CardContent>
+                    <CardContent style={{ paddingBottom: 50 }}>
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
                             icon
                         </Typography>

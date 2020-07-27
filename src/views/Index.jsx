@@ -5,8 +5,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import AppBar from './components/AppBar';
-import Copyright from './components/Copyright';
+// import Copyright from './components/Copyright';
 import Skills from './components/Skills';
+import More from './components/More';
+import Grid from '@material-ui/core/Grid';
+import ContactMe from './components/ContactMe';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -58,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     },
     desc: {
         color: '#fff',
-        lineHeight: '1.8',
+        lineHeight: '2.2',
         width: '60%',
         marginTop: theme.spacing(8),
         marginLeft: 'auto',
@@ -82,6 +85,17 @@ const useStyles = makeStyles((theme) => ({
         width: '60%',
         marginLeft: 'auto',
         marginRight: 'auto',
+    },
+    moreHeader: {
+        padding: theme.spacing(12, 0, 6),
+        marginBottom: theme.spacing(8)
+    },
+    contactMeBox: {
+        backgroundColor: '#C12121',
+        minHeight: '50vh',
+        width: '100%',
+        zIndex: '-1',
+        position: 'absolute'
     }
 }));
 
@@ -113,7 +127,7 @@ export default function Index() {
                 />
             </div>
             <Box width="auto" className={classes.redBox}>
-                <Typography variant="h4" align="center" gutterBottom className={classes.descHeader}>
+                <Typography variant="h5" align="center" gutterBottom className={classes.descHeader}>
                     Hi, I'm Alkautsar Sanusi. Nice to meet you.
                 </Typography>
                 <Typography variant="subtitle1" align="center" component="p" className={classes.desc}>
@@ -125,9 +139,25 @@ export default function Index() {
                 </Typography>
             </Box>
             <Skills />
-            <Box mt={5}>
-                <Copyright />
+            <Grid container style={{ marginBottom: '100px' }}>
+                <Grid item xs={12} md={12}>
+                    <Typography component="h1" variant="h2" align="center" color="textPrimary" className={classes.moreHeader}>
+                        {open} More and More! {close}
+                    </Typography>
+                </Grid>
+                <Grid item xs={12} md={12}>
+                    <More />
+                </Grid>
+            </Grid>
+            <ContactMe />
+            <Box width="auto" className={classes.contactMeBox}>
+                <Typography variant="h5" align="center" gutterBottom className={classes.descHeader}>
+                    Bye.
+                </Typography>
             </Box>
+            {/* <Box mt={5}>
+                <Copyright />
+            </Box> */}
             {/* End footer */}
         </Fragment >
     );
