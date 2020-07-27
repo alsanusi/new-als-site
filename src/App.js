@@ -1,11 +1,26 @@
 import React from 'react';
-// import logo from './logo.svg';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import './App.css';
 import Index from './views/Index'
 
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Raleway',
+      'sans-serif'
+    ].join(','),
+  }
+});
+
+
 function App() {
   return (
-    <Index />
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Index />
+        </div>
+      </ThemeProvider>
   );
 }
 

@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import AppBar from './components/AppBar';
 import Copyright from './components/Copyright';
+import Skills from './components/Skills';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -16,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     heroContent: {
-        padding: theme.spacing(8, 0, 6),
-        height: '100vh'
+        padding: theme.spacing(12, 0, 6),
+        height: '80vh'
     },
     cardHeader: {
         backgroundColor:
@@ -40,43 +41,65 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     img: {
-        width: '30%',
         marginLeft: 'auto',
         marginRight: 'auto',
         display: 'block',
         [theme.breakpoints.up('xs')]: {
             width: '80%',
         },
-        [theme.breakpoints.up('lg')]: {
-            width: '30%',
+        [theme.breakpoints.up('md')]: {
+            width: '35%',
         },
     },
     descHeader: {
         paddingTop: theme.spacing(12),
-        color: '#fff'
+        color: '#fff',
+        fontWeight: 'bold'
     },
     desc: {
         color: '#fff',
         lineHeight: '1.8',
-        whiteSpace: 'no-wrap',
-        margin: theme.spacing(12),
+        width: '60%',
+        marginTop: theme.spacing(8),
+        marginLeft: 'auto',
+        marginRight: 'auto',
         paddingBottom: theme.spacing(12),
+    },
+    redBox: {
+        backgroundColor: '#C12121',
+        minHeight: '50vh',
+        width: '100%'
+    },
+    bullet: {
+        display: 'inline-block',
+        margin: '0 2px',
+        fontWeight: 'bold'
+    },
+    headerSpacing: {
+        marginBottom: theme.spacing(8),
+    },
+    headerDesc: {
+        width: '60%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     }
 }));
 
 export default function Index() {
     const classes = useStyles();
+    const open = <span className={classes.bullet}>{"<"}</span>;
+    const close = <span className={classes.bullet}>{"/>"}</span>;
 
     return (
         <Fragment>
             <CssBaseline />
             <AppBar />
             {/* Hero unit */}
-            <Container maxWidth="sm" component="main" className={classes.heroContent}>
-                <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                    Hi Everyone!
+            <Container component="main" className={classes.heroContent}>
+                <Typography component="h1" variant="h2" align="center" color="textPrimary" className={classes.headerSpacing}>
+                    {open} Hello! {close}
                 </Typography>
-                <Typography variant="h6" align="center" color="textSecondary" component="p">
+                <Typography variant="h6" align="center" color="textSecondary" component="p" className={classes.headerDesc}>
                     I'm a Web and Mobile Developer, passionate about what I do,
                     and always learning something new.
                 </Typography>
@@ -89,11 +112,11 @@ export default function Index() {
                     src={require("../assets/img/laptop.png")}
                 />
             </div>
-            <Box width="auto" style={{ backgroundColor: '#C12121', minHeight: '50vh', width: '100%' }}>
+            <Box width="auto" className={classes.redBox}>
                 <Typography variant="h4" align="center" gutterBottom className={classes.descHeader}>
                     Hi, I'm Alkautsar Sanusi. Nice to meet you.
                 </Typography>
-                <Typography variant="h6" align="center" className={classes.desc}>
+                <Typography variant="subtitle1" align="center" component="p" className={classes.desc}>
                     Coming from Makassar, Indonesia, I started my journey as a developer in 2012.
                     I have special interest in front-end and mobile development,
                     where I have worked most of my projects and potentialized my skills.
@@ -101,6 +124,7 @@ export default function Index() {
                     these are the skills I have learned and improved during my journey.
                 </Typography>
             </Box>
+            <Skills />
             <Box mt={5}>
                 <Copyright />
             </Box>
