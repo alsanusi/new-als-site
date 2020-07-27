@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     },
     skillsDesc: {
         marginBotton: 30,
-        width: '60%',
+        width: '80%',
         lineHeight: '2.3',
         marginLeft: 'auto',
         marginRight: 'auto',

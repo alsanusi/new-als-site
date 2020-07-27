@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
     },
     skillsDesc: {
         marginBotton: 30,
-        width: '80%',
         lineHeight: '2.3',
         marginLeft: 'auto',
         marginRight: 'auto',

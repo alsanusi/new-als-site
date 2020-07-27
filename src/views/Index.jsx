@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     descHeader: {
-        paddingTop: theme.spacing(11),
+        paddingTop: theme.spacing(10),
         color: '#fff',
         fontWeight: 'bold',
         width: '60%',
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     },
     redBox: {
         backgroundColor: '#8a2a2a',
-        minHeight: '50vh',
+        minHeight: '60vh',
         width: '100%'
     },
     bullet: {
