@@ -4,7 +4,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import AppBar from './components/AppBar';
+import WorkCard from './components/WorkCard';
 import Footer from './components/Footer';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -16,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     heroContent: {
         padding: theme.spacing(12, 0, 6),
-        height: '80vh'
+        height: '40vh'
     },
     footer: {
         borderTop: `1px solid ${theme.palette.divider}`,
@@ -66,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: theme.spacing(8),
+    },
+    workContainer: {
+        padding: theme.spacing(6, 0, 12),
     }
 }));
 
@@ -103,6 +108,19 @@ export default function Index() {
                         src={require("../assets/img/socialmedia/github.png")}
                     />
                 </div>
+            </Container>
+            <Container className={classes.workContainer}>
+                <Grid container justify="center" spacing={6}>
+                    <Grid item>
+                        <WorkCard />
+                    </Grid>
+                    <Grid item>
+                        <WorkCard />
+                    </Grid>
+                    <Grid item>
+                        <WorkCard />
+                    </Grid>
+                </Grid>
             </Container>
             {/* End hero unit */}
             <Footer />
