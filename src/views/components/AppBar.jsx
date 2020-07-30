@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -53,14 +54,16 @@ export default function Pricing() {
             <CssBaseline />
             <Toolbar className={classes.toolbar}>
                 <Toolbar className={classes.toolbarTitle}>
-                    <img
-                        className={classes.img}
-                        alt={''}
-                        src={require("../../assets/img/logo.png")}
-                    />
+                    <Link component={NavLink} to={'/'}>
+                        <img
+                            className={classes.img}
+                            alt={'als-logo'}
+                            src={require("../../assets/img/logo.png")}
+                        />
+                    </Link>
                 </Toolbar>
                 <nav>
-                    <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+                    <Link variant="button" component={NavLink} to={'/about-me'} color="textPrimary" href="#" className={classes.link}>
                         About Me
                     </Link>
                 </nav>
