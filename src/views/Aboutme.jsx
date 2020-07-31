@@ -52,25 +52,8 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 'auto',
         marginRight: 'auto',
     },
-    socialMedia: {
-        marginLeft: 10,
-        marginRight: 10,
-        [theme.breakpoints.up('xs')]: {
-            width: '20%',
-        },
-        [theme.breakpoints.up('md')]: {
-            width: '8%',
-        },
-    },
-    socialMediaWrapper: {
-        display: 'block',
-        width: '40%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: theme.spacing(8),
-    },
     workContainer: {
-        padding: theme.spacing(6, 0, 12),
+        padding: theme.spacing(2, 0, 12),
     }
 }));
 
@@ -91,23 +74,6 @@ export default function Index() {
                 <Typography variant="h6" align="center" color="textSecondary" component="p" className={classes.headerDesc}>
                     Here a few projects i have worked on in the past.
                 </Typography>
-                <div className={classes.socialMediaWrapper}>
-                    <img
-                        className={classes.socialMedia}
-                        alt={''}
-                        src={require("../assets/img/socialmedia/linkedin.png")}
-                    />
-                    <img
-                        className={classes.socialMedia}
-                        alt={''}
-                        src={require("../assets/img/socialmedia/twitter.png")}
-                    />
-                    <img
-                        className={classes.socialMedia}
-                        alt={''}
-                        src={require("../assets/img/socialmedia/github.png")}
-                    />
-                </div>
             </Container>
             <Container className={classes.workContainer}>
                 <Grid container justify="center" spacing={6}>
