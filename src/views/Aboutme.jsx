@@ -53,7 +53,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
     },
     workContainer: {
-        padding: theme.spacing(2, 0, 12),
+        padding: theme.spacing(6, 0, 12),
+    },
+    collabContainer: {
+        padding: theme.spacing(3, 0, 12),
+    },
+    collabIcon: {
+        width: '30%'
     }
 }));
 
@@ -88,7 +94,7 @@ export default function Index() {
             desc: "is a web app for Covid19 Analytics.",
             techStack: "ReactJs",
             isActive: false,
-            link: "#"
+            link: "https://github.com/Makassar-Developer-Society/belajar-react"
         },
         {
             id: 4,
@@ -97,7 +103,7 @@ export default function Index() {
             desc: "is a web app for property management.",
             techStack: "ExpressJs, NodeJs & SQL",
             isActive: false,
-            link: "#"
+            link: "https://github.com/alsanusi/armalaproperty"
         },
         {
             id: 5,
@@ -106,7 +112,7 @@ export default function Index() {
             desc: "is a web app for car maintenance service.",
             techStack: "ExpressJs, NodeJs & SQL",
             isActive: false,
-            link: "#"
+            link: "https://github.com/alsanusi/geniusVariasi"
         },
         {
             id: 6,
@@ -114,8 +120,8 @@ export default function Index() {
             title: "Jayabaya University",
             desc: "is a web app for university profile.",
             techStack: "PHP & SQL",
-            isActive: false,
-            link: "#"
+            isActive: true,
+            link: "http://www.jayabaya.ac.id/"
         }
     ]
 
@@ -124,7 +130,7 @@ export default function Index() {
             <CssBaseline />
             <AppBar />
             {/* Hero unit */}
-            <Container component="main" className={classes.heroContent}>
+            <Container className={classes.heroContent}>
                 <Typography component="h1" variant="h2" align="center" color="textPrimary" className={classes.headerSpacing}>
                     {open} My Work! {close}
                 </Typography>
@@ -141,7 +147,23 @@ export default function Index() {
                     ))}
                 </Grid>
             </Container>
-            {/* End hero unit */}
+            <Container className={classes.collabContainer}>
+                <Typography variant="h5" align="center" color="textPrimary" style={{ fontWeight: 'bold' }}>
+                    I'm proud to have collaborated with some awesome company & organization:
+                </Typography>
+                <Grid container justify="center" spacing={2} style={{ marginTop: 50 }}>
+                    <Grid item xs={12} md={6}>
+                        <a href={"https://metrotechdigital.asia/"} target="_blank" rel="noopener noreferrer">
+                            <img src={require("../assets/img/collabs/metrotech.png")} alt="" className={classes.collabIcon} />
+                        </a>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <a href={"https://github.com/Makassar-Developer-Society"} target="_blank" rel="noopener noreferrer">
+                            <img src={require("../assets/img/collabs/mds.png")} alt="" className={classes.collabIcon} />
+                        </a>
+                    </Grid>
+                </Grid>
+            </Container>
             <Footer />
         </Fragment >
     );
