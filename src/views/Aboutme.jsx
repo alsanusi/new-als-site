@@ -53,10 +53,18 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 'auto',
     },
     workContainer: {
-        padding: theme.spacing(6, 0, 12),
+        [theme.breakpoints.up('xs')]: {
+            paddingTop: theme.spacing(8),
+            paddingBottom: theme.spacing(10),
+        },
+        [theme.breakpoints.up('md')]: {
+            paddingTop: theme.spacing(5),
+            paddingBottom: theme.spacing(12),
+        }
     },
     collabContainer: {
-        padding: theme.spacing(3, 0, 12),
+        paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(12)
     },
     collabIcon: {
         width: '30%'
@@ -137,16 +145,16 @@ export default function Index() {
             {/* Hero unit */}
             <Container className={classes.heroContent}>
                 <Typography component="h1" variant="h2" align="center" color="textPrimary" className={classes.headerSpacing}>
-                    {open} My Work! {close}
+                    {open} Works! {close}
                 </Typography>
                 <Typography variant="h6" align="center" color="textSecondary" component="p" className={classes.headerDesc}>
                     Here a few projects i have worked on in the past.
                 </Typography>
             </Container>
             <Container className={classes.workContainer}>
-                <Grid container justify="center" spacing={6}>
-                    {portfolioData.map((x, i) => (
-                        <Grid item key={x.id}>
+                <Grid container spacing={4}>
+                    {portfolioData.map(x => (
+                        <Grid item xs={12} md={4} key={x.id}>
                             <WorkCard img={x.img} title={x.title} desc={x.desc} techStack={x.techStack} isActive={x.isActive} link={x.link} />
                         </Grid>
                     ))}

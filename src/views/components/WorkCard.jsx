@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-        width: 345,
+        // maxWidth: 360,
         border: '2px solid #8a2a2a',
         backgroundColor: 'none',
         boxShadow: '-9px 9px 20px rgb(51 51 51 / 17%), -10px 8px 40px rgb(232 232 232 / 23%)'
