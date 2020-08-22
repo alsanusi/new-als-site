@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
             width: '80%',
         },
         [theme.breakpoints.up('md')]: {
-            width: '35%',
+            width: '50%',
         },
     },
     descHeader: {
@@ -177,7 +177,7 @@ export default function Index() {
                     </Typography>
                 </Grid>
                 <Grid item xs={12} md={12}>
-                    <div style={{ marginBottom: 50 }}>
+                    <div style={{ marginBottom: 80 }}>
                         <Typography variant="h5" align="center" color="textPrimary" style={{ marginBottom: 60 }}>
                             Github Activity
                         </Typography>

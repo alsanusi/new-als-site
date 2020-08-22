@@ -161,11 +161,17 @@ export default function Index() {
                         <a href={"https://metrotechdigital.asia/"} target="_blank" rel="noopener noreferrer">
                             <img src={require("../assets/img/collabs/metrotech.png")} alt="" className={classes.collabIcon} />
                         </a>
+                        <Typography variant="body2" align="center" color="textPrimary">
+                            Metrotech Digital Asia
+                        </Typography>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <a href={"https://github.com/Makassar-Developer-Society"} target="_blank" rel="noopener noreferrer">
                             <img src={require("../assets/img/collabs/mds.png")} alt="" className={classes.collabIcon} />
                         </a>
+                        <Typography variant="body2" align="center" color="textPrimary">
+                            Makassar Developer Society
+                        </Typography>
                     </Grid>
                 </Grid>
             </Container>
