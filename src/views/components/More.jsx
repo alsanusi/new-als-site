@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -38,7 +39,9 @@ export default function SimpleCard() {
                         <Typography variant="h6" component="p" gutterBottom className={classes.skillsDesc} style={{ marginBottom: '50px' }}>
                             Check some of the projects and companies i've been involved with.
                         </Typography>
-                        <Button variant="outlined" className={classes.button}>Check More</Button>
+                        <Button component={Link} to="/about-me" variant="outlined" className={classes.button}>
+                            Check More
+                        </Button>
                     </CardContent>
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>

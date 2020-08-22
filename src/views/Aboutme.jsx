@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -124,6 +124,11 @@ export default function Index() {
             link: "http://www.jayabaya.ac.id/"
         }
     ]
+
+    useEffect(() => {
+        // Scroll to the top of page
+        window.scrollTo(0, 0)
+    }, []);
 
     return (
         <Fragment>
