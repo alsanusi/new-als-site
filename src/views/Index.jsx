@@ -8,6 +8,7 @@ import AppBar from './components/AppBar';
 import Skills from './components/Skills';
 import More from './components/More';
 import Grid from '@material-ui/core/Grid';
+import GitHubCalendar from 'react-github-calendar';
 import Footer from './components/Footer';
 
 const useStyles = makeStyles((theme) => ({
@@ -91,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     },
     moreHeader: {
         padding: theme.spacing(12, 0, 6),
-        marginBottom: theme.spacing(8)
+        marginBottom: theme.spacing(5)
     },
     socialMedia: {
         marginLeft: 10,
@@ -176,6 +177,12 @@ export default function Index() {
                     </Typography>
                 </Grid>
                 <Grid item xs={12} md={12}>
+                    <div style={{ marginBottom: 50 }}>
+                        <Typography variant="h5" align="center" color="textPrimary" style={{ marginBottom: 60 }}>
+                            Github Activity
+                        </Typography>
+                        <GitHubCalendar username="alsanusi" color="hsl(4, 100%, 53%)" fontSize={15} blockSize={10} blockMargin={10} />
+                    </div>
                     <More />
                 </Grid>
             </Grid>
