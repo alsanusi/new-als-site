@@ -101,7 +101,7 @@ export default function SimpleCard() {
                             />
                         </Typography>
                         <Typography variant="h5" component="h2" gutterBottom className={classes.skillsHeader}>
-                            Back-end Development & Others
+                            Back-end Development
                         </Typography>
                         <Typography variant="body2" component="p" gutterBottom className={classes.skillsDesc}>
                             I have crossed ways with this path a couple of times. I'm very curious about this path and looking forward to digging into it.

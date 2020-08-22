@@ -161,7 +161,7 @@ export default function Index() {
                     Hi, I'm Alkautsar Sanusi. Nice to meet you.
                 </Typography>
                 <Typography variant="subtitle1" align="center" component="p" className={classes.desc}>
-                    Coming from Makassar, Indonesia, I started my journey as a developer in 2012.
+                    Born in Makassar, Indonesia, I started my journey as a developer in 2012.
                     I have special interest in front-end and mobile development,
                     where I have worked most of my projects and potentialized my skills.
                     A fan of learning and interacting with new technologies,

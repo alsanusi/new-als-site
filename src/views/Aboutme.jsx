@@ -62,6 +62,63 @@ export default function Index() {
     const open = <span className={classes.bullet}>{"<"}</span>;
     const close = <span className={classes.bullet}>{"/>"}</span>;
 
+    const portfolioData = [
+        {
+            id: 1,
+            img: require("../assets/img/portfolio/technogic.png"),
+            title: "Technogic",
+            desc: "is a web app for a company profile.",
+            techStack: "PHP & SQL",
+            isActive: true,
+            link: "http://technogic.qa/"
+        },
+        {
+            id: 2,
+            img: require("../assets/img/portfolio/pantaucovid19.png"),
+            title: "PantauCovid19",
+            desc: "is a web app for Covid19 Analytics.",
+            techStack: "ReactJs",
+            isActive: true,
+            link: "https://pantaucovid19.metrotechdigital.asia/"
+        },
+        {
+            id: 3,
+            img: require("../assets/img/portfolio/covlytics.png"),
+            title: "CovLytics",
+            desc: "is a web app for Covid19 Analytics.",
+            techStack: "ReactJs",
+            isActive: false,
+            link: "#"
+        },
+        {
+            id: 4,
+            img: require("../assets/img/portfolio/armalaproperty.png"),
+            title: "Armala Property",
+            desc: "is a web app for property management.",
+            techStack: "ExpressJs, NodeJs & SQL",
+            isActive: false,
+            link: "#"
+        },
+        {
+            id: 5,
+            img: require("../assets/img/portfolio/geniuscar.png"),
+            title: "Genius Car",
+            desc: "is a web app for car maintenance service.",
+            techStack: "ExpressJs, NodeJs & SQL",
+            isActive: false,
+            link: "#"
+        },
+        {
+            id: 6,
+            img: require("../assets/img/portfolio/jayabaya.png"),
+            title: "Jayabaya University",
+            desc: "is a web app for university profile.",
+            techStack: "PHP & SQL",
+            isActive: false,
+            link: "#"
+        }
+    ]
+
     return (
         <Fragment>
             <CssBaseline />
@@ -77,15 +134,11 @@ export default function Index() {
             </Container>
             <Container className={classes.workContainer}>
                 <Grid container justify="center" spacing={6}>
-                    <Grid item>
-                        <WorkCard />
-                    </Grid>
-                    <Grid item>
-                        <WorkCard />
-                    </Grid>
-                    <Grid item>
-                        <WorkCard />
-                    </Grid>
+                    {portfolioData.map((x, i) => (
+                        <Grid item key={x.id}>
+                            <WorkCard img={x.img} title={x.title} desc={x.desc} techStack={x.techStack} isActive={x.isActive} link={x.link} />
+                        </Grid>
+                    ))}
                 </Grid>
             </Container>
             {/* End hero unit */}

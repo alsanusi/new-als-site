@@ -10,17 +10,17 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
-        border: '4px solid #8a2a2a',
-        boxShadow: 'none',
-        backgroundColor: 'none'
+        width: 345,
+        border: '2px solid #8a2a2a',
+        backgroundColor: 'none',
+        boxShadow: '-9px 9px 20px rgb(51 51 51 / 17%), -10px 8px 40px rgb(232 232 232 / 23%)',
     },
     media: {
-        height: 140,
+        height: 250,
     },
 });
 
-export default function MediaCard() {
+export default function MediaCard({ ...props }) {
     const classes = useStyles();
 
     return (
@@ -28,26 +28,35 @@ export default function MediaCard() {
             <CardActionArea>
                 <CardMedia
                     className={classes.media}
-                    image="../../src/assets/img/laptop.png"
+                    image={props.img}
                     title="Contemplative Reptile"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
-          </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-          </Typography>
+                    <Typography variant="h6" style={{ fontWeight: 'bold' }}>
+                        {props.title}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" style={{ marginTop: 20 }}>
+                        {props.desc}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" style={{ marginTop: 20 }}>
+                        Develop Using:
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" style={{ marginTop: 10, fontWeight: 'bold' }}>
+                        {props.techStack}
+                    </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions>
-                <Button size="small" color="primary">
-                    Share
-        </Button>
-                <Button size="small" color="primary">
-                    Learn More
-        </Button>
+            <CardActions style={{ justifyContent: 'center', color: '#8a2a2a' }}>
+                {
+                    props.isActive ?
+                        <Button size="medium" style={{ fontWeight: 'bold', color: '#8a2a2a' }} href={props.link} target="_blank">
+                            Visit Website
+                        </Button>
+                        :
+                        <Button size="medium" style={{ fontWeight: 'bold', color: '#8a2a2a' }} href={props.link} target="_blank">
+                            Github Code
+                        </Button>
+                }
             </CardActions>
         </Card>
     );
