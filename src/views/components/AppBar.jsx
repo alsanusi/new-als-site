@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -7,6 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import EmailIcon from '@material-ui/icons/Email';
 import { NavLink } from 'react-router-dom';
+import ContactDialog from './ContactDialog';
 
 const useStyles = makeStyles((theme) => ({
     '@global': {
@@ -49,10 +50,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Pricing() {
     const classes = useStyles();
+    const [openDialog, setOpenDialog] = useState(false)
+
+    const handleOpenDialog = () => {
+        setOpenDialog(true)
+    }
+
+    const handleCloseDialog = () => {
+        setOpenDialog(false)
+    }
 
     return (
         <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
             <CssBaseline />
+            <ContactDialog isOpen={openDialog} isClose={handleCloseDialog} />
             <Toolbar className={classes.toolbar}>
                 <Toolbar className={classes.toolbarTitle}>
                     <Link component={NavLink} to={'/'}>
@@ -68,7 +79,7 @@ export default function Pricing() {
                         About Me
                     </Link>
                 </nav>
-                <Button href="#" variant="outlined" className={classes.contactMe}>
+                <Button onClick={handleOpenDialog} variant="outlined" className={classes.contactMe}>
                     <EmailIcon />
                 </Button>
             </Toolbar>
