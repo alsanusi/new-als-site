@@ -132,21 +132,27 @@ export default function Index() {
                     and always learning something new.
                 </Typography>
                 <div className={classes.socialMediaWrapper}>
-                    <img
-                        className={classes.socialMedia}
-                        alt={''}
-                        src={require("../assets/img/socialmedia/linkedin.png")}
-                    />
-                    <img
-                        className={classes.socialMedia}
-                        alt={''}
-                        src={require("../assets/img/socialmedia/twitter.png")}
-                    />
-                    <img
-                        className={classes.socialMedia}
-                        alt={''}
-                        src={require("../assets/img/socialmedia/github.png")}
-                    />
+                    <a href={"https://www.linkedin.com/in/muhammad-alkautsar-sanusi-6013ba123/"} target="_blank" rel="noopener noreferrer">
+                        <img
+                            className={classes.socialMedia}
+                            alt={''}
+                            src={require("../assets/img/socialmedia/linkedin.png")}
+                        />
+                    </a>
+                    <a href={"https://twitter.com/alkautstark_"} target="_blank" rel="noopener noreferrer">
+                        <img
+                            className={classes.socialMedia}
+                            alt={''}
+                            src={require("../assets/img/socialmedia/twitter.png")}
+                        />
+                    </a>
+                    <a href={"https://github.com/alsanusi"} target="_blank" rel="noopener noreferrer">
+                        <img
+                            className={classes.socialMedia}
+                            alt={''}
+                            src={require("../assets/img/socialmedia/github.png")}
+                        />
+                    </a>
                 </div>
             </Container>
             {/* End hero unit */}
