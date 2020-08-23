@@ -45,7 +45,12 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         border: '1px solid #C12121',
         margin: theme.spacing(1, 1.5)
-    }
+    },
+    formBase: {
+        border: '2px solid #8a2a2a',
+        borderRadius: 20,
+        boxShadow: '-9px 9px 20px rgb(51 51 51 / 17%), -10px 8px 40px rgb(232 232 232 / 23%)'
+    },
 }));
 
 export default function Pricing() {
@@ -63,7 +68,7 @@ export default function Pricing() {
     return (
         <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
             <CssBaseline />
-            <ContactDialog isOpen={openDialog} isClose={handleCloseDialog} />
+            <ContactDialog isOpen={openDialog} isClose={handleCloseDialog} className={classes.formBase} />
             <Toolbar className={classes.toolbar}>
                 <Toolbar className={classes.toolbarTitle}>
                     <Link component={NavLink} to={'/'}>
