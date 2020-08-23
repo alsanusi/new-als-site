@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
+import MyResume from '../../assets/pdf/alsanusi-resume.pdf';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,7 +50,9 @@ export default function SimpleCard() {
                         <Typography variant="h6" component="p" gutterBottom className={classes.skillsDesc} style={{ marginBottom: '82px' }}>
                             Or download a summary of my work.
                         </Typography>
-                        <Button variant="outlined" className={classes.button}>Download Resume</Button>
+                        <a href={MyResume} target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                            <Button variant="outlined" className={classes.button}>Download Resume</Button>
+                        </a>
                     </CardContent>
                 </Grid>
             </Grid>
