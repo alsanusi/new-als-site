@@ -58,9 +58,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             width: '40%',
         },
-        // [theme.breakpoints.up('lg')]: {
-        //     width: '35%',
-        // },
     },
     descHeader: {
         paddingTop: theme.spacing(10),
