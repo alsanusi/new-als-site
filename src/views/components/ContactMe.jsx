@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import ContactDialog from './ContactDialog';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -41,9 +42,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleCard() {
     const classes = useStyles();
+    const [openDialog, setOpenDialog] = useState(false)
+
+    const handleOpenDialog = () => {
+        setOpenDialog(true)
+    }
+    const handleCloseDialog = () => {
+        setOpenDialog(false)
+    }
 
     return (
         <Card className={classes.root}>
+            <ContactDialog isOpen={openDialog} isClose={handleCloseDialog} />
             <Grid container spacing={3}>
                 <Grid item xs={12} md={4} className={classes.alignCenter}>
                     <CardContent>
@@ -61,11 +71,10 @@ export default function SimpleCard() {
                 </Grid>
                 <Grid item xs={12} md={4} className={classes.alignCenter}>
                     <CardContent>
-                        <Button variant="outlined" className={classes.button}>Let's Talk</Button>
+                        <Button variant="outlined" className={classes.button} onClick={handleOpenDialog}>Let's Talk</Button>
                     </CardContent>
                 </Grid>
             </Grid>
-
         </Card>
     );
 }

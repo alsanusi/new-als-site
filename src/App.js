@@ -4,6 +4,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import './App.css';
 import Index from './views/Index';
 import AboutMe from './views/Aboutme';
+import ContactList from './views/ContactList';
 import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
 
 const theme = createMuiTheme({
@@ -29,6 +30,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Index} />
             <Route path="/about-me" component={AboutMe} />
+            <Route path="/contact-list" component={ContactList} />
           </Switch>
         </Router>
         </div>

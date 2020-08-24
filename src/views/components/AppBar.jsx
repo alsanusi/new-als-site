@@ -55,7 +55,6 @@ export default function Pricing() {
     const handleOpenDialog = () => {
         setOpenDialog(true)
     }
-
     const handleCloseDialog = () => {
         setOpenDialog(false)
     }
