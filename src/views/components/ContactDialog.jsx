@@ -9,6 +9,9 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import Grid from '@material-ui/core/Grid';
+import axios from 'axios';
+import SuccessSnackbar from './Snackbar/Success';
+import FailedSnackbar from './Snackbar/Failed';
 
 const Transition = forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -43,6 +46,8 @@ export default function FormDialog({ ...props }) {
         email: '',
         message: ''
     })
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
 
     const handleChangeName = event => {
         setBody({ ...body, name: event.target.value })
@@ -52,6 +57,19 @@ export default function FormDialog({ ...props }) {
     }
     const handleChangeMessage = event => {
         setBody({ ...body, message: event.target.value })
+    }
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        axios.post('https://mighty-wave-71572.herokuapp.com/api/contact', body)
+            .then(res => {
+                setSuccess(true)
+                isClose()
+            })
+            .catch(err => {
+                setError(true)
+                isClose()
+            })
     }
 
     return (
@@ -74,6 +92,7 @@ export default function FormDialog({ ...props }) {
                                 label="Full Name"
                                 type="text"
                                 fullWidth
+                                required
                                 onChange={handleChangeName}
                                 color="secondary"
                             />
@@ -84,6 +103,7 @@ export default function FormDialog({ ...props }) {
                                 label="Email Address"
                                 type="email"
                                 fullWidth
+                                required
                                 onChange={handleChangeEmail}
                                 color="secondary"
                             />
@@ -105,11 +125,17 @@ export default function FormDialog({ ...props }) {
                     <Button onClick={isClose} color="primary">
                         Close
                     </Button>
-                    <Button onClick={isClose} color="secondary" className={classes.send}>
+                    <Button onClick={handleSubmit} color="secondary" className={classes.send}>
                         Send
                     </Button>
                 </DialogActions>
             </Dialog>
+            {
+                success ?
+                    <SuccessSnackbar /> :
+                    error ?
+                        <FailedSnackbar /> : <div />
+            }
         </div>
     );
 }
