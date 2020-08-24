@@ -30,7 +30,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Index} />
             <Route path="/about-me" component={AboutMe} />
-            <Route path="/contact-list" component={ContactList} />
+            <Route path="/clist" component={ContactList} />
           </Switch>
         </Router>
         </div>
