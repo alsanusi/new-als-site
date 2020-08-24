@@ -79,7 +79,7 @@ export default function Index() {
     const portfolioData = [
         {
             id: 1,
-            img: require("../assets/img/portfolio/technogic.png"),
+            img: "https://res.cloudinary.com/metrotech-digital-asia/image/upload/v1598263398/als-site/portfolio/technogic_qyxwri.png",
             title: "Technogic",
             desc: "is a web app for a company profile.",
             techStack: "PHP & SQL",
@@ -88,7 +88,7 @@ export default function Index() {
         },
         {
             id: 2,
-            img: require("../assets/img/portfolio/pantaucovid19.png"),
+            img: "https://res.cloudinary.com/metrotech-digital-asia/image/upload/v1598263392/als-site/portfolio/pantaucovid19_hodoha.png",
             title: "PantauCovid19",
             desc: "is a web app for Covid19 Analytics.",
             techStack: "ReactJs",
@@ -97,7 +97,7 @@ export default function Index() {
         },
         {
             id: 3,
-            img: require("../assets/img/portfolio/covlytics.png"),
+            img: "https://res.cloudinary.com/metrotech-digital-asia/image/upload/v1598263401/als-site/portfolio/covlytics_nl65ee.png",
             title: "CovLytics",
             desc: "is a web app for Covid19 Analytics.",
             techStack: "ReactJs",
@@ -106,7 +106,7 @@ export default function Index() {
         },
         {
             id: 4,
-            img: require("../assets/img/portfolio/armalaproperty.png"),
+            img: "https://res.cloudinary.com/metrotech-digital-asia/image/upload/v1598263403/als-site/portfolio/armalaproperty_gjw9mu.png",
             title: "Armala Property",
             desc: "is a web app for property management.",
             techStack: "ExpressJs, NodeJs & SQL",
@@ -115,7 +115,7 @@ export default function Index() {
         },
         {
             id: 5,
-            img: require("../assets/img/portfolio/geniuscar.png"),
+            img: "https://res.cloudinary.com/metrotech-digital-asia/image/upload/v1598263401/als-site/portfolio/geniuscar_h9dfin.png",
             title: "Genius Car",
             desc: "is a web app for car maintenance service.",
             techStack: "ExpressJs, NodeJs & SQL",
@@ -124,7 +124,7 @@ export default function Index() {
         },
         {
             id: 6,
-            img: require("../assets/img/portfolio/jayabaya.png"),
+            img: "https://res.cloudinary.com/metrotech-digital-asia/image/upload/v1598263404/als-site/portfolio/jayabaya_ekvpm8.png",
             title: "Jayabaya University",
             desc: "is a web app for university profile.",
             techStack: "PHP & SQL",
