@@ -63,7 +63,7 @@ export default function SimpleCard() {
                             Languages & tools I've learned and used:
                         </Typography>
                         <Typography variant="body2" component="p">
-                            JavaScript, React Native, Flutter.
+                            React Native & Flutter.
                         </Typography>
                     </CardContent>
                 </Grid>
@@ -81,13 +81,13 @@ export default function SimpleCard() {
                             Front-end Development
                         </Typography>
                         <Typography variant="body2" component="p" gutterBottom className={classes.skillsDesc}>
-                            I have crossed ways with this path a couple of times. I'm very curious about this path and looking forward to digging into it.
+                            My main path, I've worked mostly as a frontend developer and I'm loving it. I like to bring ideas to life in the browser.
                         </Typography>
                         <Typography variant="body2" component="p" gutterBottom className={classes.skillsLanguage}>
                             Languages & tools I've learned and used:
                         </Typography>
                         <Typography variant="body2" component="p">
-                            JavaScript, React Native, Flutter.
+                            ReactJs, AngularJs, VueJs, NextJs, Figma & Sketch.
                         </Typography>
                     </CardContent>
                 </Grid>
@@ -104,13 +104,13 @@ export default function SimpleCard() {
                             Back-end Development
                         </Typography>
                         <Typography variant="body2" component="p" gutterBottom className={classes.skillsDesc}>
-                            I have crossed ways with this path a couple of times. I'm very curious about this path and looking forward to digging into it.
+                            Technologies that I've learned on my journey. Some of them crucial on my day by day, others looking forward to using again.
                         </Typography>
                         <Typography variant="body2" component="p" gutterBottom className={classes.skillsLanguage}>
                             Languages & tools I've learned and used:
                         </Typography>
                         <Typography variant="body2" component="p">
-                            JavaScript, React Native, Flutter.
+                            NodeJs, Express & Lumen.
                         </Typography>
                     </CardContent>
                 </Grid>

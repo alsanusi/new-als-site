@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
     heroContent: {
         padding: theme.spacing(12, 0, 6),
-        height: '80vh'
+        height: '100vh'
     },
     cardHeader: {
         backgroundColor:
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
             width: '80%',
         },
         [theme.breakpoints.up('md')]: {
-            width: '50%',
+            width: '45%',
         },
     },
     descHeader: {
@@ -94,23 +94,15 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(12, 0, 6),
         marginBottom: theme.spacing(5)
     },
-    socialMedia: {
-        marginLeft: 10,
-        marginRight: 10,
+    me: {
+        marginTop: theme.spacing(3),
         [theme.breakpoints.up('xs')]: {
-            width: '20%',
+            width: '90%',
         },
         [theme.breakpoints.up('md')]: {
-            width: '8%',
+            width: '30%',
         },
     },
-    socialMediaWrapper: {
-        display: 'block',
-        width: '40%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: theme.spacing(8),
-    }
 }));
 
 export default function Index() {
@@ -131,28 +123,12 @@ export default function Index() {
                     I'm a Web and Mobile Developer, passionate about what I do,
                     and always learning something new.
                 </Typography>
-                <div className={classes.socialMediaWrapper}>
-                    <a href={"https://www.linkedin.com/in/muhammad-alkautsar-sanusi-6013ba123/"} target="_blank" rel="noopener noreferrer">
-                        <img
-                            className={classes.socialMedia}
-                            alt={''}
-                            src={require("../assets/img/socialmedia/linkedin.png")}
-                        />
-                    </a>
-                    <a href={"https://twitter.com/alkautstark_"} target="_blank" rel="noopener noreferrer">
-                        <img
-                            className={classes.socialMedia}
-                            alt={''}
-                            src={require("../assets/img/socialmedia/twitter.png")}
-                        />
-                    </a>
-                    <a href={"https://github.com/alsanusi"} target="_blank" rel="noopener noreferrer">
-                        <img
-                            className={classes.socialMedia}
-                            alt={''}
-                            src={require("../assets/img/socialmedia/github.png")}
-                        />
-                    </a>
+                <div>
+                    <img
+                        className={classes.me}
+                        alt={''}
+                        src={require("../assets/img/me.png")}
+                    />
                 </div>
             </Container>
             {/* End hero unit */}

@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Pricing() {
     const classes = useStyles();
-    const [openDialog, setOpenDialog] = useState(true)
+    const [openDialog, setOpenDialog] = useState(false)
 
     const handleOpenDialog = () => {
         setOpenDialog(true)

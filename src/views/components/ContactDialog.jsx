@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -35,10 +35,24 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-
 export default function FormDialog({ ...props }) {
     const { isOpen, isClose } = props
     const classes = useStyles();
+    const [body, setBody] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+
+    const handleChangeName = event => {
+        setBody({ ...body, name: event.target.value })
+    }
+    const handleChangeEmail = event => {
+        setBody({ ...body, email: event.target.value })
+    }
+    const handleChangeMessage = event => {
+        setBody({ ...body, message: event.target.value })
+    }
 
     return (
         <div>
@@ -60,6 +74,7 @@ export default function FormDialog({ ...props }) {
                                 label="Full Name"
                                 type="text"
                                 fullWidth
+                                onChange={handleChangeName}
                                 color="secondary"
                             />
                         </Grid>
@@ -69,6 +84,7 @@ export default function FormDialog({ ...props }) {
                                 label="Email Address"
                                 type="email"
                                 fullWidth
+                                onChange={handleChangeEmail}
                                 color="secondary"
                             />
                         </Grid>
@@ -79,6 +95,7 @@ export default function FormDialog({ ...props }) {
                                 multiline
                                 rows={4}
                                 fullWidth
+                                onChange={handleChangeMessage}
                                 color="secondary"
                             />
                         </Grid>
