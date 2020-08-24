@@ -12,6 +12,11 @@ const theme = createMuiTheme({
       'Raleway',
       'sans-serif'
     ].join(','),
+  },
+  palette: {
+    secondary: {
+      main: '#8a2a2a'
+    }
   }
 });
 
