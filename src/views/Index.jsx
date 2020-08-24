@@ -21,7 +21,9 @@ const useStyles = makeStyles((theme) => ({
     },
     heroContent: {
         padding: theme.spacing(12, 0, 6),
-        height: '100vh',
+        [theme.breakpoints.up('md')]: {
+            height: '100vh',
+        },
         [theme.breakpoints.up('lg')]: {
             height: '90vh',
         },
@@ -54,11 +56,11 @@ const useStyles = makeStyles((theme) => ({
             width: '80%',
         },
         [theme.breakpoints.up('md')]: {
-            width: '45%',
+            width: '40%',
         },
-        [theme.breakpoints.up('lg')]: {
-            width: '35%',
-        },
+        // [theme.breakpoints.up('lg')]: {
+        //     width: '35%',
+        // },
     },
     descHeader: {
         paddingTop: theme.spacing(10),
@@ -107,10 +109,6 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.up('md')]: {
             width: '30%',
-        },
-        [theme.breakpoints.up('lg')]: {
-            marginTop: theme.spacing(5),
-            width: '35%',
         },
     },
 }));
