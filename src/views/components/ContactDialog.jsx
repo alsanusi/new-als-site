@@ -125,7 +125,7 @@ export default function FormDialog({ ...props }) {
                     <Button onClick={isClose} color="primary">
                         Close
                     </Button>
-                    <Button onClick={handleSubmit} color="secondary" className={classes.send}>
+                    <Button onClick={handleSubmit} disabled={!body.name || !body.email || !body.message} color="secondary" className={classes.send}>
                         Send
                     </Button>
                 </DialogActions>
